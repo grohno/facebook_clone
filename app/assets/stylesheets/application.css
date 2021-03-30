@@ -14,3 +14,47 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background: #f0f2f5;
+}
+.navbar-default {
+  background-color: #fff;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+  color: #1877f2;
+  font-size: 36px;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav>li>a {
+  font-size: 16px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #1877f2;
+  text-decoration: underline;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border-radius: 6px;
+  font-size: 17px;
+  padding: 10px;
+  border: 1px solid #dddfe2;
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #1877f2;
+}
+@media only screen and (max-width: 767px){
+  .navbar-default .navbar-brand {
+    font-size: 5vw;
+  }
+  .navbar-default .navbar-nav>li {
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .navbar-default .navbar-nav>li:last-child {
+    border-bottom: none;
+  }
+}
