@@ -1,24 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @picture.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @picture.content %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @picture.image.url %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @picture.user %>
-</p>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path(@picture) %>
+<article class="row">
+  <ul class="row picture_list">
+    <li class="col-sm-12 col-md-10 col-md-offset-1">
+      <p><span>User: <%= @picture.user.name %></span></p>
+      <p><span>Title:</span><%= @picture.title %></p>
+      <p class="content"><span>Content:</span><%= @picture.content %></p>
+      <p><%= image_tag @picture.image.url %></p>
+    </li>
+  </ul>
+  <div class="row text-center">
+  <% if @picture.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_picture_path(@picture), class: 'btn btn-success' %> |
+  <% end %>
+    <%= link_to 'Back', pictures_path(@picture), class: 'btn btn-success' %>
+  </div>
+</article>

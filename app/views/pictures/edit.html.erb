@@ -2,5 +2,7 @@
 
 <%= render 'form', picture: @picture %>
 
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+<div class="row text-center">
+  <%= link_to 'Show', @picture, class: 'btn btn-success' %> |
+  <%= link_to 'Back', pictures_path, class: 'btn btn-success' %>
+</div>

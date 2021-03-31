@@ -1,5 +1,7 @@
-<h1>New Picture</h1>
+<article class="row">
+  <h1 class="text-center">New Picture</h1>
 
-<%= render 'form', picture: @picture %>
+  <%= render 'form', picture: @picture %>
 
-<%= link_to 'Back', pictures_path %>
+  <p class="text-center"><%= link_to 'Back', pictures_path, class: "btn btn-success btn-lg" %></p>
+</article>
